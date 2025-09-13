@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website - Example Corp</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="main-header fixed top-0 left-0 w-full bg-white shadow z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Logo -->
+            <div class="logo-icon"></div>
+
+            <!-- Navbar -->
+            <nav>
+                <ul class="flex gap-3">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#profile">Our Profile</a></li>
+                    <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link" href="#contact">Message Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-200 to-indigo-300 text-center">
+            <h1 class="text-5xl font-extrabold mb-4">HI <span id="welcome-user">User</span>!</h1>
+            <p class="text-lg">Selamat datang di Web Kami</p>
+        </section>
+
+        <!-- Our Profile Section -->
+        <section id="profile" class="py-16 bg-gray-100">
+            <!-- Photo Banner -->
+            <div class="relative h-64 md:h-96 w-full bg-cover bg-center mb-10" style="background-image: url('images/profile-banner.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Our Profile</h2>
+                </div>
+            </div>
+
+            <!-- About the Company -->
+            <div class="container mx-auto px-4 md:px-0 max-w-4xl text-center mb-16">
+                <h3 class="text-2xl font-semibold mb-6">About The Company</h3>
+                <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                    Perusahaan ini didirikan pada tahun 2020 dengan tujuan memberikan solusi inovatif untuk bisnis di seluruh dunia. 
+                    Kami mengkhususkan diri dalam layanan digital, desain, dan konsultasi strategis untuk membantu klien mencapai kesuksesan.
+                </p>
+            </div>
+
+            <!-- Vision & Mission -->
+            <div class="container mx-auto px-4 md:px-0 max-w-5xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    <!-- Vision -->
+                    <div class="bg-indigo-50 p-8 rounded shadow">
+                        <h4 class="text-2xl font-semibold mb-4">Vision</h4>
+                        <p class="text-gray-700 mb-4">
+                            Menjadi perusahaan terkemuka yang dikenal karena solusi inovatif yang memberdayakan bisnis dan komunitas di seluruh dunia.
+                        </p>
+                        <p class="text-gray-700">
+                            Kami membayangkan masa depan di mana teknologi dan kreativitas berpadu untuk menciptakan solusi berdampak bagi dunia yang berkelanjutan.
+                        </p>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="bg-green-50 p-8 rounded shadow">
+                        <h4 class="text-2xl font-semibold mb-4">Mission</h4>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Menyediakan solusi digital berkualitas tinggi sesuai kebutuhan klien.</li>
+                            <li>Mendorong praktik bisnis yang berkelanjutan dan etis.</li>
+                            <li>Terus berinovasi dan meningkatkan layanan kami.</li>
+                            <li>Membangun kemitraan jangka panjang dengan klien.</li>
+                            <li>Memberikan pelatihan dan kesempatan pengembangan untuk tim kami.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-16">
+            <div class="container mx-auto px-4 md:px-0 max-w-5xl text-center">
+                <h2 class="text-3xl font-semibold mb-10">Portfolio</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <img src="images/portfolio1.jpg" alt="Portfolio 1" class="rounded shadow">
+                    <img src="images/portfolio2.jpg" alt="Portfolio 2" class="rounded shadow">
+                    <img src="images/portfolio3.jpg" alt="Portfolio 3" class="rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Us Section -->
+        <section id="contact" class="min-h-screen flex flex-col items-center justify-evenly py-16 bg-gray-100">
+            <h2 class="text-3xl font-semibold mb-6">Message Us</h2>
+            <form class="mt-4 w-[90%] max-w-md bg-white p-4 rounded shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 font-medium">Name:</label>
+                    <input type="text" id="name" name="name" class="border p-2 w-full rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 font-medium">Email:</label>
+                    <input type="email" id="email" name="email" class="border p-2 w-full rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block mb-2 font-medium">Message:</label>
+                    <textarea id="message" name="message" class="border p-2 w-full rounded" rows="4"></textarea>
+                </div>
+                <button type="button" onclick="validateForm();" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Send</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center p-4 bg-gray-800 text-white">
+            &copy; 2025 Ahmad Sya Bani. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
